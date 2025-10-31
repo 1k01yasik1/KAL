@@ -1,4 +1,5 @@
 APP = code/app
+BENCH = code/benchmark
 TEST_EXE = code/tests/test_main.out
 TEST_JSON = code/tests/stud-unit-test-report.json
 TEST_LOG = code/tests/test_output.txt
@@ -6,6 +7,8 @@ TEST_LOG = code/tests/test_output.txt
 COMMON_SRCS = code/ant_colony_solver.cpp code/graph.cpp
 
 $(APP): code/main.cpp $(COMMON_SRCS)
+	g++ -std=c++17 -O2 -pthread $^ -o $@
+$(BENCH): code/benchmark.cpp $(COMMON_SRCS)
 	g++ -std=c++17 -O2 -pthread $^ -o $@
 
 $(TEST_EXE): code/tests/test_main.cpp $(COMMON_SRCS)
@@ -30,6 +33,6 @@ report/report.pdf: report/report.tex
 test: $(TEST_JSON)
 
 clean:
-	rm -f $(APP) $(TEST_EXE) $(TEST_LOG) $(TEST_JSON)
+	rm -f $(APP) $(BENCH) $(TEST_EXE) $(TEST_LOG) $(TEST_JSON)
 	rm -f report/*.aux report/*.log report/*.out report/*.toc report/*.synctex.gz
 	echo "OK"
