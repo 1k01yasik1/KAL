@@ -1,0 +1,11 @@
+# Build artifacts
+lr4/code/app
+lr4/code/tests/test_main.out
+lr4/code/tests/test_output.txt
+lr4/code/tests/stud-unit-test-report.json
+lr4/code/tests/test_main.dSYM/
+lr4/report/*.aux
+lr4/report/*.log
+lr4/report/*.out
+lr4/report/*.toc
+lr4/report/*.synctex.gz
