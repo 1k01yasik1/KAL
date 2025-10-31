@@ -1,0 +1,22 @@
+digraph TSP {
+  A -> B [weight=10];
+  B -> A [weight=10];
+  A -> C [weight=12];
+  C -> A [weight=12];
+  A -> D [weight=11];
+  D -> A [weight=11];
+  B -> C [weight=9];
+  C -> B [weight=9];
+  B -> D [weight=8];
+  D -> B [weight=8];
+  C -> D [weight=7];
+  D -> C [weight=7];
+  A -> E [weight=20];
+  E -> A [weight=20];
+  B -> E [weight=17];
+  E -> B [weight=17];
+  C -> E [weight=16];
+  E -> C [weight=16];
+  D -> E [weight=18];
+  E -> D [weight=18];
+}
